@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-taco",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Rules I wanted but couldn't find elsewhere",
   "keywords": [
     "eslint",
@@ -20,7 +20,7 @@
     "mocha": "^6.1.4"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=6.0.0"
   },
   "license": "MIT"
 }
