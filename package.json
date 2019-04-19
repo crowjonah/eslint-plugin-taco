@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-taco",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Rules I wanted but couldn't find elsewhere",
   "keywords": [
     "eslint",
