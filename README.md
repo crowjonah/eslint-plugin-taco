@@ -36,14 +36,28 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "taco/rule-name": 2
+        "taco/multi-var-declaration-newline": 2
     }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
+* Require newline between multiple variable declarations and declarators
+
+*BAD*
+```
+const A_STRING = '[string]',
+  ANOTHER_STRING = '[another-string]'
+```
+
+*GOOD*
+```
+const 
+  A_STRING = '[string']',
+  ANOTHER_STRING = '[another-string]'
+```
+
 
 
 
