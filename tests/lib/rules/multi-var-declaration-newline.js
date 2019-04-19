@@ -8,8 +8,12 @@ const parserOptions = { ecmaVersion: 2018, sourceType: 'module' };
 
 const errors = [
     {
-      message: rule.meta.messages.always,
-      type: 'VariableDeclaration'
+        message: rule.meta.messages.always,
+        type: 'VariableDeclaration'
+    },
+    {
+        message: rule.meta.messages.never,
+        type: 'VariableDeclaration'
     }
   ];
 
@@ -22,17 +26,39 @@ ruleTester.run("multi-var-declaration-newline", rule, {
 const
 A_STRING = 'string',
 ANOTHER_STRING = 'another-string'`
+        },
+        {
+            parserOptions,
+            options: ['never'],
+            code: `
+const A_STRING = 'string',
+ANOTHER_STRING = 'another-string'`
         }
     ],
 
     invalid: [
         {
             parserOptions,
-            options: ['never'],
-            errors,
+            options: ['always'],
+            errors: [{
+                message: rule.meta.messages.always,
+                type: 'VariableDeclarator'
+            }],
             code: `
-const A_STRING = 'string'
-const ANOTHER_STRING = 'another-string'`
+const A_STRING = 'string',
+ANOTHER_STRING = 'another-string'`
+        },
+        {
+            parserOptions,
+            options: ['never'],
+            errors: [{
+                message: rule.meta.messages.never,
+                type: 'VariableDeclarator'
+            }],
+            code: `
+const
+A_STRING = 'string',
+ANOTHER_STRING = 'another-string'`
         }
     ]
 });
