@@ -1,0 +1,26 @@
+{
+  "name": "eslint-plugin-taco",
+  "version": "0.0.0",
+  "description": "Rules I wanted but couldn't find elsewhere",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "crowjonah",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests tests/**/*.js"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT"
+}
