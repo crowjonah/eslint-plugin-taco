@@ -54,7 +54,7 @@ const A_STRING = '[string]',
 *GOOD*
 ```
 const 
-  A_STRING = '[string']',
+  A_STRING = '[string]',
   ANOTHER_STRING = '[another-string]'
 ```
 
